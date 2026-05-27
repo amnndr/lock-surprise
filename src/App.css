@@ -1,0 +1,174 @@
+@keyframes fall {
+  0% {
+    transform: translateY(-10vh) scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(110vh) scale(1.5);
+    opacity: 0;
+  }
+}
+
+.heart {
+  position: absolute;
+  top: -10vh;
+  color: rgba(255, 105, 180, 0.7);
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.animate-fade-in {
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float-wiggle {
+  0%, 100% { transform: translateY(0) rotate(-1deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+
+:root {
+  --env-w: 400px;
+  --env-h: 260px;
+  --env-half-w: 200px;
+  --env-flap-h: 150px;
+  --env-front-h1: 130px;
+  --env-front-h2: 130px;
+  --env-letter-h: 240px;
+  --env-letter-expand: 550px;
+  --env-letter-translate: -70px;
+}
+
+@media (max-width: 480px) {
+  :root {
+    --env-w: 320px;
+    --env-h: 208px;
+    --env-half-w: 160px;
+    --env-flap-h: 120px;
+    --env-front-h1: 104px;
+    --env-front-h2: 104px;
+    --env-letter-h: 192px;
+    --env-letter-expand: 480px;
+    --env-letter-translate: -50px;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --env-w: 280px;
+    --env-h: 182px;
+    --env-half-w: 140px;
+    --env-flap-h: 105px;
+    --env-front-h1: 91px;
+    --env-front-h2: 91px;
+    --env-letter-h: 168px;
+    --env-letter-expand: 400px;
+    --env-letter-translate: -40px;
+  }
+}
+
+.envelope-wrapper {
+  position: relative;
+  width: var(--env-w);
+  height: var(--env-h);
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.envelope-wrapper:not(.open) {
+  animation: float-wiggle 3s ease-in-out infinite;
+}
+
+.envelope-back {
+  position: absolute;
+  inset: 0;
+  background-color: #f472b6;
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.envelope-flap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: var(--env-half-w) solid transparent;
+  border-right: var(--env-half-w) solid transparent;
+  border-top: var(--env-flap-h) solid #fbcfe8;
+  transform-origin: top;
+  transition: transform 0.6s ease-in-out, z-index 0s 0.3s;
+  z-index: 4;
+}
+
+.envelope-wrapper.open .envelope-flap {
+  transform: rotateX(180deg);
+  z-index: 1; /* Pushes flap behind the letter once open */
+}
+
+.envelope-front {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-left: var(--env-half-w) solid #ec4899; /* pink-500 */
+  border-right: var(--env-half-w) solid #ec4899; /* pink-500 */
+  border-top: var(--env-front-h1) solid transparent;
+  border-bottom: var(--env-front-h2) solid #db2777; /* pink-600 */
+  border-radius: 0 0 8px 8px;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.envelope-letter {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  height: var(--env-letter-h);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: height 0.8s ease-in-out 0.4s, transform 0.8s ease-in-out 0.4s;
+  z-index: 2; /* Sandwiched between back and front */
+}
+
+.envelope-wrapper.open .envelope-letter {
+  height: var(--env-letter-expand); /* Expands upwards */
+  transform: translateY(var(--env-letter-translate)); /* Slightly slides up for better centering */
+}
+
+/* Custom scrollbar for the letter */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #fbcfe8;
+  border-radius: 4px;
+}
+ @keyframes paper-fly {
+  0%   { top: 80vh; left: -10vw; transform: rotate(15deg); }
+  25%  { top: 20vh; left: 40vw; transform: rotate(45deg); }
+  50%  { top: 60vh; left: 80vw; transform: rotate(135deg); }
+  75%  { top: 90vh; left: 20vw; transform: rotate(225deg); }
+  100% { top: 80vh; left: -10vw; transform: rotate(375deg); }
+}
+
+.paper-plane {
+  animation: paper-fly 15s ease-in-out infinite;
+}
