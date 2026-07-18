@@ -21,15 +21,15 @@ export default function EnvelopeLetter({ onPlaneClick }: EnvelopeLetterProps) {
             Happy 1st Anniversary! 🎉
           </h3>
           <div className="text-gray-700 space-y-3 text-sm md:text-base overflow-y-auto w-full custom-scrollbar">
-            <p>Dear Baby,</p>
+            <p>Dear Honey,</p>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+              I don't know what to say. I think I already said so many. There's only one thing that won't ever change is that I love you. 
             </p>
              <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              I wanna do so amny things with you and do nothing and just chill at home with you too. No matter what we do, I just want you beside me. That's me only selfish wish. I want you to love me forever. Just like I will. 
             </p>
             <p className="font-semibold text-pink-500 mt-4">
-              Many more years to come together ❤️
+              I miss you so much my love ❤️
             </p><br/><br/><br/><br/><br/>
           </div>
         </div>
