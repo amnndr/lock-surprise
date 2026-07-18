@@ -27,7 +27,7 @@ export default function EnvelopeLetter({ onPlaneClick }: EnvelopeLetterProps) {
             </p>
              <p>
               I wanna do so many things with you and do nothing and just chill at home at the same time :( No matter what we do, I just want you beside me. That's my only selfish wish. I want you to love me forever. P.s. theres a hidden letter. u should try clicking on something. 
-            </p>
+            </p> 
             <p className="font-semibold text-pink-500 mt-4">
               I miss you so much my love ❤️
             </p><br/><br/><br/><br/><br/>
