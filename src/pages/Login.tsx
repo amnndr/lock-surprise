@@ -13,7 +13,7 @@ export default function Login({ onLoginSuccess }: LoginProps) {
     e.preventDefault();
     
     const correctNames = ["baby", "jiyun", "honey", "ragebaiter"];
-    const correctDate = "2025-07-18", "2025-07-19";
+    const correctDate = ["2025-07-18", "2025-07-19"];
     
     if (correctNames.includes(name.toLowerCase().trim()) && date === correctDate) {
       setError(false);
