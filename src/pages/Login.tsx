@@ -12,8 +12,8 @@ export default function Login({ onLoginSuccess }: LoginProps) {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    const correctNames = ["baby", "gojo satoru", "son goku"];
-    const correctDate = "2026-05-31";
+    const correctNames = ["baby", "jiyun", "honey", "ragebaiter"];
+    const correctDate = "2025-07-18", "2025-07-19";
     
     if (correctNames.includes(name.toLowerCase().trim()) && date === correctDate) {
       setError(false);
