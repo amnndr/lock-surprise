@@ -9,16 +9,12 @@ export default function EasterEgg({ onBack }: EasterEggProps) {
         You found the Easter Egg!
       </h2>
       
-      <div className="w-full max-w-3xl aspect-video bg-gray-900 rounded-2xl overflow-hidden shadow-2xl border-4 border-pink-500">
-        <iframe 
-          width="100%" 
-          height="100%" 
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" 
-          title="YouTube video player" 
-          frameBorder="0" 
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-          allowFullScreen
-        ></iframe>
+      <div className="w-full max-w-2xl bg-white/10 p-8 rounded-2xl border-2 border-pink-500 shadow-2xl backdrop-blur-sm">
+        <p className="text-xl md:text-2xl text-white text-center font-medium leading-relaxed">
+          "Lowkey I can't wait to give you head. 
+          <br /><br />
+          I will give you a surprise later, i know you'll enjoy it" 
+        </p>
       </div>
       
       <button
