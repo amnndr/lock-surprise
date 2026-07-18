@@ -23,10 +23,10 @@ export default function EnvelopeLetter({ onPlaneClick }: EnvelopeLetterProps) {
           <div className="text-gray-700 space-y-3 text-sm md:text-base overflow-y-auto w-full custom-scrollbar">
             <p>Dear Honey,</p>
             <p>
-              I don't know what to say. I think I already said so many. There's only one thing that won't ever change is that I love you. 
+              I don't know what to say. I think I already said so many. The only one thing that won't ever change is that I love you. 
             </p>
              <p>
-              I wanna do so amny things with you and do nothing and just chill at home with you too. No matter what we do, I just want you beside me. That's me only selfish wish. I want you to love me forever. Just like I will. 
+              I wanna do so many things with you and do nothing and just chill at home at the same time :( No matter what we do, I just want you beside me. That's my only selfish wish. I want you to love me forever. P.s. theres a hidden letter. u should try clicking on something. 
             </p>
             <p className="font-semibold text-pink-500 mt-4">
               I miss you so much my love ❤️
